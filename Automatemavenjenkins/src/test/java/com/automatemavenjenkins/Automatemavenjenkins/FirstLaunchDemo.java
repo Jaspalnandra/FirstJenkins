@@ -23,5 +23,6 @@ public class FirstLaunchDemo {
 	public void launch() {
 		url = "https://www.google.com";	
 		driver.get(url);
+		System.out.println("RUNNNNNNNNNNNN");
 	}
 }
