@@ -11,7 +11,7 @@ public class FirstLaunchDemo {
 	static WebDriver driver;
 	String url;
 	
-	@Test(priority = 0)
+	@BeforeSuite
 	public void setup() {
 		System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");		
 		driver = new FirefoxDriver();
@@ -19,9 +19,9 @@ public class FirstLaunchDemo {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
 	
-	@Test(priority = 1)
+	@Test
 	public void launch() {
-		url = "https://www.amazon.in";	
+		url = "https://www.google.com";	
 		driver.get(url);
 	}
 }
